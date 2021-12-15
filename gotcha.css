@@ -1,0 +1,111 @@
+body {
+  background: #e0e5ec;
+}
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  min-width: 850px;
+}
+main {
+  padding: 10px;
+  text-align: center;
+  max-width: 890px;
+  min-width: 850px;
+  margin: 0 auto;
+}
+section {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  width: 45%;
+  text-align: center;
+  border-radius: 15px;
+}
+#a-team {
+  background: #e0e5ec;
+  background: linear-gradient(0deg, #e0e5ec -50%, rgba(195,11,7,1) 100%);
+}
+#b-team {
+  background: #e0e5ec;
+  background: linear-gradient(0deg, rgb(74, 159, 245) 0%, #e0e5ec 150%);
+}
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  min-width: 150px;
+  max-width: 200px;
+  height: 40px;
+  padding: 10px;
+  margin: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #e0e5ec;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+.custom-btn {
+  margin: 50px auto;
+  width: 200px;
+  height: 60px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-16 {
+  border: none;
+  color: #000;
+}
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+  transition: all 0.2s ease;
+}
+.btn-16:hover {
+  color: #000;
+}
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
+}
+
+#a-team ul li:hover, #b-team ul li:hover {
+  top: 2px;
+}
