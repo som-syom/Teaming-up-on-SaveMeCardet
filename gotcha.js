@@ -1,27 +1,7 @@
-let newCardet = ['chanhyle',
-  'heeskim',
-  'hyunjcho',
-  'jayu',
-  'sangklee',
-  'seongjki',
-  'shwang',
-  'ean',
-  'snoh',
-  'yejikim'
-]
-const oldCardet = ['gyeon',
-  'kankim',
-  'taeskim',
-  'Hoylee',
-  'sham',
-  'dhyeon',
-  'naykim',
-  'sjin',
-  'jim',
-  'soekim',
-]
+import { newUsers } from "./new-user.js";
+import { oldUsers } from "./old-user.js";
 
-const $button = document.querySelector('#shuffle');
+const $button = document.querySelector("#shuffle");
 
 function getNCardet(target, source, n) {
   for (let i = 0; i < n; ++i) {
@@ -31,10 +11,17 @@ function getNCardet(target, source, n) {
     target.push(value);
   }
 }
+const aTeamList = document.querySelector(".a-team-cardet-list");
+const bTeamList = document.querySelector(".b-team-cardet-list");
 
-$button.addEventListener('click', () => {
+$button.addEventListener("click", () => {
   const shuffleA = [];
   const shuffleB = [];
+  aTeamList.innerHTML = "";
+  bTeamList.innerHTML = "";
+
+  const newCardet = newUsers.map((el) => el.name);
+  const oldCardet = oldUsers.map((el) => el.name);
 
   const tmpA = oldCardet.slice(0, oldCardet.length);
   const tmpB = newCardet.slice(0, newCardet.length);
@@ -45,10 +32,18 @@ $button.addEventListener('click', () => {
   getNCardet(shuffleB, tmpA, tmpA.length);
   getNCardet(shuffleB, tmpB, tmpB.length);
 
-  for (let i = 0; i < shuffleA.length; ++i)
-    document.querySelector('#a-team-cardet-name' + i).textContent = shuffleA[i];
-  for (let i = 0; i < shuffleB.length; ++i)
-    document.querySelector('#b-team-cardet-name' + i).textContent = shuffleB[i];
-  console.log('a team : ' + shuffleA);
-  console.log('b team : ' + shuffleB);
+  for (let i = 0; i < shuffleA.length; ++i) {
+    const newUser = document.createElement("li");
+    newUser.classList.add(`cardet-list__item`);
+    newUser.innerHTML = shuffleA[i];
+    aTeamList.appendChild(newUser);
+  }
+  for (let i = 0; i < shuffleB.length; ++i) {
+    const newUser = document.createElement("li");
+    newUser.classList.add(`cardet-list__item`);
+    newUser.innerHTML = shuffleB[i];
+    bTeamList.appendChild(newUser);
+  }
+  console.log("a team : " + shuffleA);
+  console.log("b team : " + shuffleB);
 });

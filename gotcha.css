@@ -1,5 +1,6 @@
 body {
   background: #e0e5ec;
+  font-size: 14px;
 }
 h1 {
   text-align: center;
@@ -24,7 +25,7 @@ section {
 }
 #a-team {
   background: #e0e5ec;
-  background: linear-gradient(0deg, #e0e5ec -50%, rgba(195,11,7,1) 100%);
+  background: linear-gradient(0deg, #e0e5ec -50%, rgba(195, 11, 7, 1) 100%);
 }
 #b-team {
   background: #e0e5ec;
@@ -48,9 +49,8 @@ li {
   cursor: pointer;
   border-radius: 5px;
   background: #e0e5ec;
-  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-  7px 7px 20px 0px rgba(0,0,0,.1),
-  4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .custom-btn {
@@ -60,7 +60,7 @@ li {
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 30px;
   background: transparent;
@@ -68,9 +68,8 @@ li {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-  7px 7px 20px 0px rgba(0,0,0,.1),
-  4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
 
@@ -87,11 +86,8 @@ li {
   left: 0;
   direction: rtl;
   z-index: -1;
-  box-shadow:
-    -7px -7px 20px 0px #fff9,
-    -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
   transition: all 0.2s ease;
 }
 .btn-16:hover {
@@ -106,6 +102,45 @@ li {
   top: 2px;
 }
 
-#a-team ul li:hover, #b-team ul li:hover {
+#a-team ul li:hover,
+#b-team ul li:hover {
   top: 2px;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  width: 300px;
+  margin: auto;
+}
+
+.user-list__item {
+  font-size: 1rem;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 40px;
+}
+
+.user-list__item__del-btn {
+  border: none;
+  background-color: transparent;
+  color: red;
+}
+
+.input-wrap {
+  display: flex;
+  width: 600px;
+  margin: auto;
 }

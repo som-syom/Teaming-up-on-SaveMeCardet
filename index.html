@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gotcha!</title>
+    <link rel="stylesheet" href="gotcha.css" type="text/css" />
+    <script defer type="module" src="./old-user.js"></script>
+    <script defer type="module" src="./new-user.js"></script>
+    <script defer type="module" src="gotcha.js"></script>
+  </head>
+
+  <body>
+    <h1>Cardet.shuffle()</h1>
+    <main>
+      <div class="input-wrap">
+        <div class="old-user">
+          <h3>구카뎃</h3>
+          <input class="old-user-input" type="text" autofocus />
+          <button class="old-user-add-btn">추가</button>
+          <div class="user-list-wrap">
+            <h2>목록</h2>
+            <ul class="user-list old-user-list"></ul>
+          </div>
+        </div>
+        <div class="new-user">
+          <h3>뉴카뎃</h3>
+          <input class="new-user-input" type="text" autofocus />
+          <button class="new-user-add-btn">추가</button>
+          <div class="user-list-wrap">
+            <h2>목록</h2>
+            <ul class="user-list new-user-list"></ul>
+          </div>
+        </div>
+      </div>
+      <section id="a-team">
+        <ul class="cardet-list a-team-cardet-list"></ul>
+      </section>
+      <section id="b-team">
+        <ul class="cardet-list b-team-cardet-list"></ul>
+      </section>
+      <div></div>
+      <button id="shuffle" class="custom-btn btn-16">Shuffle</button>
+    </main>
+  </body>
+</html>
