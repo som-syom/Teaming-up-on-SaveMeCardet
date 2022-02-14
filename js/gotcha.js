@@ -26,12 +26,17 @@ $button.addEventListener("click", () => {
   const tmpA = oldCardet.slice(0, oldCardet.length);
   const tmpB = newCardet.slice(0, newCardet.length);
   console.log(tmpA, tmpB);
-  const halfNumberOfOldCardet = Math.floor(tmpA.length / 2);
-  const halfNumberOfNewCardet = Math.floor(tmpB.length / 2);
+  let halfNumberOfOldCardet = Math.floor(tmpA.length / 2);
+  let halfNumberOfNewCardet = Math.floor(tmpB.length / 2);
+  if (tmpA.length % 2 === 1 && tmpB.length % 2 === 1) {
+    tmpA.length > tmpB.length
+      ? (halfNumberOfOldCardet += 1)
+      : (halfNumberOfNewCardet += 1);
+  }
   getNCardet(shuffleA, tmpA, halfNumberOfOldCardet);
   getNCardet(shuffleA, tmpB, halfNumberOfNewCardet);
-  getNCardet(shuffleB, tmpA, tmpA.length);
   getNCardet(shuffleB, tmpB, tmpB.length);
+  getNCardet(shuffleB, tmpA, tmpA.length);
 
   for (let i = 0; i < shuffleA.length; ++i) {
     const newUser = document.createElement("li");
