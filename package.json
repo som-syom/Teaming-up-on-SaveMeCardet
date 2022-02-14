@@ -1,0 +1,24 @@
+{
+  "name": "save",
+  "version": "1.0.0",
+  "description": "구해줘카뎃 팀원 정하는 html 입니다.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/som-syom/Teaming-up-on-SaveMeCardet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/som-syom/Teaming-up-on-SaveMeCardet/issues"
+  },
+  "homepage": "https://github.com/som-syom/Teaming-up-on-SaveMeCardet#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
