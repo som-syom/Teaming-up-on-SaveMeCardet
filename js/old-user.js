@@ -1,5 +1,4 @@
 const userList = document.querySelector(".old-user-list");
-const userListItem = document.querySelector(".user-list__item");
 const userAddBtn = document.querySelector(".old-user-add-btn");
 const userInput = document.querySelector(".old-user-input");
 
@@ -37,11 +36,13 @@ const updateUser = () => {
 };
 
 const AddUser = () => {
-  if (userInput.value !== "") {
-    initUser(userInput.value);
-    updateUser();
-    userInput.value = "";
-  }
+  setTimeout(() => {
+    if (userInput.value !== "") {
+      initUser(userInput.value);
+      updateUser();
+      userInput.value = "";
+    }
+  }, 100);
 };
 
 userAddBtn.addEventListener("click", (event) => {

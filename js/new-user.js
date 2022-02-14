@@ -36,11 +36,13 @@ const newUpdateUser = () => {
 };
 
 const newAddUser = () => {
-  if (newUserInput.value !== "") {
-    newInitUser(newUserInput.value);
-    newUpdateUser();
-    newUserInput.value = "";
-  }
+  setTimeout(() => {
+    if (newUserInput.value !== "") {
+      newInitUser(newUserInput.value);
+      newUpdateUser();
+      newUserInput.value = "";
+    }
+  }, 100);
 };
 
 newUserAddBtn.addEventListener("click", (event) => {

@@ -25,6 +25,7 @@ $button.addEventListener("click", () => {
 
   const tmpA = oldCardet.slice(0, oldCardet.length);
   const tmpB = newCardet.slice(0, newCardet.length);
+  console.log(tmpA, tmpB);
   const halfNumberOfOldCardet = Math.floor(tmpA.length / 2);
   const halfNumberOfNewCardet = Math.floor(tmpB.length / 2);
   getNCardet(shuffleA, tmpA, halfNumberOfOldCardet);
